@@ -30,4 +30,4 @@ jobs:
       with:
         context: .
         push: true
-        tags: your-username/recipe-website:latest
+        tags: mustafaj/recipe-website:latest
