@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recipe Website</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Delicious Recipes</h1>
+  </header>
+  <main>
+    <section class="recipe">
+      <h2>Spaghetti Carbonara</h2>
+      <img src="images/spaghetti-carbonara.jpg" alt="Spaghetti Carbonara">
+      <p>This classic Italian pasta dish is made with eggs, cheese, pancetta, and pepper.</p>
+    </section>
+    <section class="recipe">
+      <h2>Chocolate Cake</h2>
+      <img src="images/chocolate-cake.jpg" alt="Chocolate Cake">
+      <p>Rich and moist chocolate cake perfect for any occasion.</p>
+    </section>
+    <!-- Feedback Form -->
+    <section class="feedback">
+      <h2>Submit Your Feedback</h2>
+      <form id="feedback-form">
+        <label for="feedback">Your Feedback:</label>
+        <input type="text" id="feedback" name="feedback" required>
+        <button type="submit">Submit</button>
+      </form>
+      <p id="response-message"></p>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2025 Recipe Website</p>
+  </footer>
+  <script src="scripts.js"></script>
+</body>
+</html>
