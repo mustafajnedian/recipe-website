@@ -1,7 +1,10 @@
 document.addEventListener('DOMContentLoaded', function() {
   const form = document.getElementById('feedback-form');
   const responseMessage = document.getElementById('response-message');
+  const searchBar = document.getElementById('search-bar');
+  const recipeList = document.getElementById('recipe-list');
 
+  // Handle feedback form submission
   form.addEventListener('submit', function(event) {
     event.preventDefault();
     const feedback = document.getElementById('feedback').value;
@@ -26,6 +29,21 @@ document.addEventListener('DOMContentLoaded', function() {
     .catch(error => {
       responseMessage.textContent = 'There was a problem submitting your feedback. Please try again later.';
       console.error('There was an error:', error);
+    });
+  });
+
+  // Handle recipe search functionality
+  searchBar.addEventListener('input', function(event) {
+    const query = event.target.value.toLowerCase();
+    const recipes = recipeList.getElementsByClassName('recipe');
+
+    Array.from(recipes).forEach(recipe => {
+      const title = recipe.getElementsByTagName('h2')[0].textContent.toLowerCase();
+      if (title.includes(query)) {
+        recipe.style.display = '';
+      } else {
+        recipe.style.display = 'none';
+      }
     });
   });
 });
