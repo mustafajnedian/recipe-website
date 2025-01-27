@@ -3,6 +3,8 @@ document.addEventListener('DOMContentLoaded', function() {
   const responseMessage = document.getElementById('response-message');
   const searchBar = document.getElementById('search-bar');
   const recipeList = document.getElementById('recipe-list');
+  const testimonialForm = document.getElementById('testimonial-form');
+  const testimonialList = document.getElementById('testimonial-list');
 
   // Handle feedback form submission
   form.addEventListener('submit', function(event) {
@@ -45,5 +47,21 @@ document.addEventListener('DOMContentLoaded', function() {
         recipe.style.display = 'none';
       }
     });
+  });
+
+  // Handle testimonial form submission
+  testimonialForm.addEventListener('submit', function(event) {
+    event.preventDefault();
+    const username = document.getElementById('username').value;
+    const testimonial = document.getElementById('testimonial').value;
+
+    // Create testimonial item and add to the list
+    const testimonialItem = document.createElement('div');
+    testimonialItem.classList.add('testimonial-item');
+    testimonialItem.innerHTML = `<strong>${username}</strong><p>${testimonial}</p>`;
+    testimonialList.appendChild(testimonialItem);
+
+    // Clear form
+    testimonialForm.reset();
   });
 });

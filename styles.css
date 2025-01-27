@@ -1,33 +1,55 @@
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
+/* Add these styles to styles.css */
+
+.testimonials {
+  background-color: #f9f9f9;
+  padding: 20px;
+  margin: 20px 0;
+  border: 1px solid #ccc;
+  border-radius: 10px;
 }
 
-header {
-  background-color: #ff6347;
-  color: white;
-  padding: 1rem;
-  text-align: center;
+.testimonial-form {
+  margin-bottom: 20px;
 }
 
-main {
-  padding: 1rem;
+.testimonial-form h3,
+#testimonial-list h3 {
+  margin-top: 0;
 }
 
-.recipe {
-  margin-bottom: 2rem;
-}
-
-.recipe img {
-  max-width: 100%;
-  height: auto;
+.testimonial-form label {
   display: block;
-  margin: 0 auto 1rem;
+  margin: 10px 0 5px;
 }
 
-footer {
-  background-color: #f1f1f1;
-  padding: 1rem;
-  text-align: center;
+.testimonial-form input,
+.testimonial-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.testimonial-form button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.testimonial-form button:hover {
+  background-color: #45a049;
+}
+
+#testimonial-list .testimonial-item {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+#testimonial-list .testimonial-item:last-child {
+  border-bottom: none;
 }
